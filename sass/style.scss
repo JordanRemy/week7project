@@ -13,6 +13,7 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'variables';
 /*
 ====================================
 Default Styling
@@ -24,25 +25,35 @@ img {
 }
 
 body {
-	color: #333;
+	color: white;
+	background: black;
+	margin:0;
+	padding:0;
 }
 
 .container {
-	max-width: 1200px;
+	// max-width: 1200px;
 	margin: 0 auto;
-}
-
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
 }
 
 .full {
 	width: 100%;
 }
 
-
+.hero {
+    width: 100%;
+    background-size: cover;
+    color: #fff;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
 
 
