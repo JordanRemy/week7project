@@ -9,7 +9,7 @@ ul {
 	height: $nav-height;
 	position: fixed;
 	width: 100%;
-	
+	z-index: 200;
 	ul.menu {
 		@include flexBox();
 		text-align: center;

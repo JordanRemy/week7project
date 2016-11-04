@@ -32,8 +32,8 @@
 		</div>
 		<aside>
 			<h2>Filter and Sort</h2>
-			<?php while(have_rows('side_menu')) : the_row();?>
-				<h3><?php the_sub_field('category'); ?></h3>
+			<?php while(have_rows('side_menu',get_option('page_for_posts'))) : the_row();?>
+				<h3><?php the_sub_field('category',get_option('page_for_posts')); ?></h3>
 				<hr>
 			<?php endwhile; ?>
 		</aside>
