@@ -68,18 +68,21 @@
     <?php $secondAboutImage = get_field('about_image_2'); ?>
     <div class="about-img" style="background: url(<?php echo $secondAboutImage['url']; ?>) fixed center no-repeat;">
         <div class="about-content">
-            <hr>
-            <h2><?php the_field('social_links_header'); ?></h2><!-- //put after element for divider content dash -->
-            <p><?php the_field('social_links_description') ?></p>
-            <hr>
-
-            <?php while(have_rows('social')) : the_row();?>
-                <div class="social-link">
-                    <a href="<?php the_sub_field('social_link'); ?>">
-                        <i class="fa fa-<?php the_sub_field('social_platform_name'); ?>"></i>
-                    </a>
+            <div class="inner-wrapper">
+                <hr>
+                <h2><?php the_field('social_links_header'); ?></h2><!-- //put after element for divider content dash -->
+                <p><?php the_field('social_links_description') ?></p>
+                <hr>
+                <div class="social-link-container">
+                    <?php while(have_rows('social')) : the_row();?>
+                        <div class="social-link">
+                            <a href="<?php the_sub_field('social_link'); ?>" target="_blank">
+                                <i class="fa fa-<?php the_sub_field('social_platform_name'); ?>"></i>
+                            </a>
+                        </div>
+                    <?php endwhile; ?>  
                 </div>
-            <?php endwhile; ?>
+            </div>
         </div>
     </div>
 </section>

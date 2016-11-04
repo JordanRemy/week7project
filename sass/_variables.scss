@@ -8,15 +8,15 @@
 	src: url('fonts/Debby.otf') format("opentype");
 }
 
-@font-face {
-	font-family: "Proxima Nova";
-	src: url('fonts/proxima_nova/ProximaNova-Regular.otf') format("opentype otf");
-}
+// @font-face {
+// 	font-family: "Proxima Nova";
+// 	src: url('fonts/proxima_nova/ProximaNova-Regular.otf') format("opentype otf");
+// }
 
 // FONTS //
 $tradegothic: "Trade Gothic";
 $debby: "Debby";
-$proxima: "Proxima Nova";
+$proxima: 'proxima nova', sans-serif;
 
 // COLORS //
 $main-text: #ffffff;
