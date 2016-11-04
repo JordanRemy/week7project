@@ -1,0 +1,21 @@
+@mixin flexBox() {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+@mixin navText($fontsize) {
+	font-size: $fontsize;
+	color: white;
+	text-transform: uppercase;
+	font-family: $tradegothic;
+	text-decoration: none;
+}
+
+@mixin debbyText($fontsize) {
+	font-size: $fontsize;
+	font-family: $debby;
+	text-align: center;
+	font-weight: 100;
+	opacity: 0.75;
+}

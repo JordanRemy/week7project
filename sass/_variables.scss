@@ -1,1 +1,27 @@
-$tradegothic: 'Trade Gothic', sans-serif;
+@font-face {
+	font-family: "Trade Gothic";
+	src: url('fonts/TradeGothicLTStd-BdCn20.otf') format("opentype");
+}
+
+@font-face {
+	font-family: "Debby";
+	src: url('fonts/Debby.otf') format("opentype");
+}
+
+@font-face {
+	font-family: "Proxima Nova";
+	src: url('fonts/proxima_nova/ProximaNova-Regular.otf') format("opentype otf");
+}
+
+// FONTS //
+$tradegothic: "Trade Gothic";
+$debby: "Debby";
+$proxima: "Proxima Nova";
+
+// COLORS //
+$main-text: #ffffff;
+
+// HEADER //
+$nav-height: 10vh;
+$header-height: 180vh;
+

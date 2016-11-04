@@ -1,15 +1,39 @@
-ul.menu {
+ul {
 	padding: 0;
-	margin: 0 auto;
-	text-align: center;
-	li {
-		display: inline;
-		margin-right: 10px;
+	margin: 0;
+	list-style-type: none;
+}
+
+.main-nav {
+	@include flexBox();
+	height: $nav-height;
+	position: fixed;
+	width: 100%;
+	
+	ul.menu {
+		@include flexBox();
+		text-align: center;
+		
+		li {
+			a {
+				@include navText(1.8rem);
+				padding: 1.65rem;
+			}
+		}
+	}
+}
+
+.secondary-nav {
+	width: 25rem;
+	padding: 2rem;
+	border: 3px solid $main-text;
+	height: 20rem;
+	margin-right: 3rem;
+	ul.menu li {
 		a {
-			color: #333;
-			padding: 10px;
-			color: white;
-			text-transform: uppercase;
+			@include navText(1.6rem);
+			padding: 1.75rem 0 0;
+			display:block;
 		}
 	}
 }

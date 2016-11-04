@@ -1,3 +1,53 @@
-footer {
-	clear: both;
+.footer-logo {
+	margin-top: 5.5rem;
+	.img-wrapper {
+		width: 7.9rem;
+		margin: 0 auto;
+		img {
+			width:100%;
+		}
+	}
+	h2{
+		@include debbyText(2.7rem);
+		letter-spacing: 0.01rem;
+		opacity: 1;
+		margin:1rem;
+	}
+}
+
+.footer-bottom {
+	margin: 0 6rem 4.5rem;
+	@include flexBox();
+	justify-content: space-between;
+	font-family: $proxima;
+	text-transform: uppercase;
+	p{
+		margin: 0;
+		font-size: 0.75rem;
+		letter-spacing: 0.096rem;
+	}
+}
+
+.footer-nav {
+	ul.menu {
+		@include flexBox();
+		text-align: center;
+		li {
+			&:first-of-type a:only-child {
+				padding-left: 0;
+			}
+			a {
+				padding: 1.4rem 1rem 0;
+				color: white;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 0.9rem;
+				letter-spacing: 0.1rem;
+				border-top: solid 1px #dddddd;
+				&:last-of-type {
+					padding-right: 0;
+				}
+			}
+		}
+	}
 }
