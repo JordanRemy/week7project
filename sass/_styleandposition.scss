@@ -26,7 +26,7 @@ HEROS
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
-    h1{
+    h1 {
     	@include debbyText(8.8rem);
     	text-transform: lowercase;
     }
