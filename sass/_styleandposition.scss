@@ -61,7 +61,9 @@ ABOUT US
 
 .about-us {
 	h4 {
+		@include debbyText(18.6rem);
 		float:left;
+		text-transform: lowercase;
 	}
 }
 
@@ -95,6 +97,31 @@ SERVICE MENU
 		height: 60rem;
 		overflow-y: scroll;
 		background: red;
+	}
+}
+
+/*
+====================================
+SOCIAL CONTAINER
+====================================
+*/
+
+.social-link-container {
+	@include flexBox();
+	.social-link {
+		@include flexBox();
+		width: 4.3rem;
+		height: 4.3rem;
+		border-radius: 50%;
+		border: 1px solid white;
+		margin-right: 1.8rem;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		i {
+			font-size: 1.6rem;
+			color: white;
+		}
 	}
 }
 
