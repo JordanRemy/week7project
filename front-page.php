@@ -72,6 +72,14 @@
             <h2><?php the_field('social_links_header'); ?></h2><!-- //put after element for divider content dash -->
             <p><?php the_field('social_links_description') ?></p>
             <hr>
+
+            <?php while(have_rows('social')) : the_row();?>
+                <div class="social-link">
+                    <a href="<?php the_sub_field('social_link'); ?>">
+                        <i class="fa fa-<?php the_sub_field('social_platform_name'); ?>"></i>
+                    </a>
+                </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
