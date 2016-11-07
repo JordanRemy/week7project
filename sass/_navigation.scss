@@ -18,9 +18,17 @@ ul {
 			a {
 				@include tradeGothic(1.8rem);
 				padding: 1.65rem;
+				// border-bottom: 1px solid transparent;
+				position:relative;
+				&::after {
+					content: "";
+					border-bottom: 1px solid white;
+					position: absolute;
+				}
 				&:hover{
 					color: red;
 					transition: 0.4 ease all;
+					// border-bottom: 1px solid white;
 				}
 			}
 		}
