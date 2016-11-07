@@ -4,7 +4,7 @@
 	align-items:center;
 }
 
-@mixin navText($fontsize) {
+@mixin tradeGothic($fontsize) {
 	font-size: $fontsize;
 	color: white;
 	text-transform: uppercase;
@@ -18,4 +18,19 @@
 	text-align: center;
 	font-weight: 100;
 	opacity: 0.75;
+}
+
+@mixin proxima($fontsize) {
+	font-size: $fontsize;
+	font-family: $proxima;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 0.14rem;
+}
+
+@mixin sentText($fontsize) {
+	font-size: $fontsize;
+	font-family: $sentLight;
+	color: white;
+	letter-spacing: 0.14rem;
 }

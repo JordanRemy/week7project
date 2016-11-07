@@ -14,11 +14,11 @@
             <img src="<?php echo $headerLogo['url'] ?>" alt="<?php echo $headerLogo['alt'] ?>"/>
         </div>
         <h1><?php the_field('tagline_text'); ?></h1> 
-        <div class="sub-header">
+        <div class="black-container wrapper-2">
             <h2><?php the_field('info_box_header'); ?></h2>
             <p><?php the_field('info_box_description'); ?></p>
-            <div class="btn-wrapper">
-                <a href="<?php the_field('cta_link'); ?>" target="_blank"><?php the_field('info_box_cta'); ?></a>
+            <div class="cta-wrapper">
+                <a href="<?php the_field('cta_link'); ?>" target="_blank"><?php the_field('info_box_cta'); ?><img src="images/arrow.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -89,10 +89,15 @@
 
 <?php $ctaBgImage = get_field('cta_bg_image') ?>
 <section class="call-to-action" style="background-image: url(<?php echo $ctaBgImage['url']; ?>)">
-    <div class="wrapper">
-        <h2><?php the_field('cta_title_bottom'); ?></h2><!-- //put after element for divider content dash -->
-        <p><?php the_field('cta_description_bottom'); ?></p>
-        <a href="<?php the_field('cta_link_bottom'); ?>" target="blank"><?php the_field('cta_text_bottom'); ?></a>
+    <div class="wrapper-2">
+        <div class="black-container">
+            <h2><?php the_field('cta_title_bottom'); ?></h2><!-- //put after element for divider content dash -->
+            <p><?php the_field('cta_description_bottom'); ?></p>
+            <div class="cta-wrapper">
+                <a href="<?php the_field('cta_link_bottom'); ?>" target="blank"><?php the_field('cta_text_bottom'); ?><img src="images/arrow.png" alt=""></a>
+            </div>
+
+        </div>
     </div>
 </section>
 

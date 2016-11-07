@@ -9,10 +9,49 @@ body {
 	padding:0;
 }
 
+h2 {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+}
+
 .wrapper {
 	max-width: 1140px;
 	width: 70%;
 	margin: 0 auto;
+}
+
+.wrapper-2 {
+	max-width:940px;
+	width: 50%;
+	margin: 0 auto;
+	@include flexBox();
+	flex-direction: column;
+	// height:100%;
+	text-align:center;
+	h2 {
+		@include tradeGothic(3rem);
+		position: relative;
+		&::after {
+			content: "-";
+			position: absolute;
+			font-family: Debby;
+			font-size: 4.6rem;
+			top: 31%;
+			left: 50%;
+			font-weight: 100;
+			transform: translateX(-50%);
+		}
+	}
+	p {
+		@include sentText(1.5rem);
+		line-height: 2.3rem;
+		letter-spacing: 0.05rem;
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+	}
 }
 
 /*
@@ -27,10 +66,13 @@ HEROS
     background-size: cover;
     color: #fff;
     h1{
-    	@include debbyText(8.8rem);
+    	@include debbyText(8.5rem);
     	text-transform: lowercase;
+    	opacity: 1;
+    	margin: 0;
     }
 }
+
 
 .secondary {
 	h1 {
@@ -42,17 +84,36 @@ HEROS
 	@include flexBox();
 	flex-direction: column;
 	padding-top: $nav-height;
-	height: 100%;
+	height: 90%;
 }
 
 .logo-wrapper {
-	width: 28rem;
+	width: 27rem;
 }
 
 img {
 	width: 100%;
 }
 
+.black-container {
+	border: 2px solid white;
+	padding: 5.5rem 7rem;
+	margin-top: 20rem;
+	position: relative;
+	z-index: 100;
+	&::after {
+		content: "";
+		position: absolute;
+		background: #000;
+		opacity: .6;
+		display: block;
+		top: -1.6rem;
+		left: -1.6rem;
+		right: 1.6rem;
+		bottom: 1.6rem;
+		z-index: -20;
+	}
+}
 /*
 ====================================
 ABOUT US
@@ -163,11 +224,93 @@ CALL TO ACTION
 	height: 100vh;
 	background-size: cover;
 	background-attachment: fixed;
+	.black-container {
+		margin: 0;
+	}
+	.wrapper-2 {
+		height: 100%;
+	}
+}
+
+/*
+====================================
+CONTACT
+====================================
+*/
+
+.contact {
 	.wrapper {
-		@include flexBox();
-		flex-direction: column;
-		height:100%;
-		text-align:center;
+		padding-top: 8rem;
+		.sub-head {
+			text-align: center;
+			@include tradeGothic(3.4rem);
+			color: #282828;
+			position: relative;
+			// &::after {
+			// 	content: "-";
+			// 	position: absolute;
+			// 	font-family: Debby;
+			// 	font-size: 4.6rem;
+			// 	top: 31%;
+			// 	left: 50%;
+			// 	font-weight: 100;
+			// 	transform: translateX(-50%);
+			// }
+		}
+	}
+	.img-wrapper {
+		width: 40rem;
+	}
+}
+
+.contact-container {
+	display:flex;
+	align-items: flex-start;
+	margin: 9rem 0;
+	position: relative;
+	&::after {
+		content: "";
+		border-bottom: 1px solid #fff;
+		position: absolute;
+		width: 100%;
+		bottom: -4.5rem;
+		opacity: 0.2;
+	}
+	&:last-of-type {
+		&::after {
+			content: "";
+			display: none;
+		}
+	}
+	&:nth-child(1) {
+		margin: 6rem 0;
+	}
+}
+
+
+.contact-info {
+	text-align: left;
+	margin-left: 5.5rem;
+	h2 {
+		@include tradeGothic(8rem);
+	}
+	h3 {
+		@include tradeGothic(4.2rem);
+		margin: 0.5rem 0 0;
+		line-height: 1.4rem;
+	}
+	p {
+		@include sentText(1.7rem);
+		line-height: 2.8rem;
+		letter-spacing: 0.05rem;
+		margin: 0;
+	}
+}
+
+.contact-specific {
+	margin: 5rem 0 2.5rem;
+	p:nth-child(2) {
+		font-style: italic;
 	}
 }
 
@@ -217,8 +360,7 @@ BLOG
 		}
 
 		h2 {
-			@include navText(3.6rem);
-			font-family: $tradegothic;
+			@include tradeGothic(3.6rem);
 			color: black;
 			letter-spacing: -0.025rem;
 		}
@@ -227,5 +369,20 @@ BLOG
 			text-align: left;
 		}
 	}
+}
 
+/*
+====================================
+CTAS
+====================================
+*/
+
+.cta-wrapper {
+	width: 100%;
+	margin: 1.5rem auto 0;
+	a {
+		@include proxima(1.2rem);
+		font-weight: 700;
+		text-decoration: none;
+	}
 }

@@ -16,21 +16,27 @@
 <section class="contact">
 	
 	<div class="wrapper">
-		<h2><?php the_field('page_sub_heading') ?></h2>
+		<h2 class="sub-head"><?php the_field('page_sub_heading') ?></h2>
 		<?php while(have_rows('location')) : the_row();?>
-			<div class="img-wrapper">
-				<?php $mapImage = get_sub_field('map_image') ?>
-				<img src="<?php echo $mapImage['url']; ?>" alt="">
+			<div class="contact-container">
+				<div class="img-wrapper">
+					<?php $mapImage = get_sub_field('map_image') ?>
+					<img src="<?php echo $mapImage['url']; ?>" alt="">
+				</div>
+				<div class="contact-info">
+					<h2><?php the_sub_field('location_street'); ?></h2>
+					<h3><?php the_sub_field('location_city'); ?></h3>
+					<div class="contact-specific">
+						<p><?php the_sub_field('phone_number'); ?></p> <!-- phonenumber -->
+						<p><?php the_sub_field('email'); ?></p> <!-- email -->
+					</div>
+					<div class="contact-hours">
+						<p><?php the_sub_field('hours'); ?></p> <!-- hours -->
+						<p><?php the_sub_field('weekend_hours'); ?></p> <!-- weekend hours -->
+					</div>
+				</div>
+				<!-- <hr> -->
 			</div>
-			<div class="contact-info">
-				<h2><?php the_sub_field('location_street'); ?></h2>
-				<h3><?php the_sub_field('location_city'); ?></h3>
-				<p><?php the_sub_field('phone_number'); ?></p> <!-- phonenumber -->
-				<p><?php the_sub_field('email'); ?></p> <!-- email -->
-				<p><?php the_sub_field('hours'); ?></p> <!-- hours -->
-				<p><?php the_sub_field('weekend_hours'); ?></p> <!-- weekend hours -->
-			</div>
-			<hr>
 		<?php endwhile; ?>
 	</div>
 </section>
