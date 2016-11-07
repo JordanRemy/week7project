@@ -20,9 +20,20 @@ ul {
 			a {
 				@include tradeGothic(1.8rem);
 				padding: 1.65rem;
+				border-bottom: 2px solid transparent;
+				transition: border-color 0.4 ease;
+				// position:relative;
+				// &::after {
+				// 	content: "";
+				// 	border-bottom: 1px solid white;
+				// 	position: absolute;
+				// 	top: 10px;
+				// 	width:10px;
+				// 	height: 10px;
+				// 	background: white;
+				// }
 				&:hover{
-					color: red;
-					transition: 0.4 ease all;
+					border-color: white;
 				}
 			}
 		}

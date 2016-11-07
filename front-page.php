@@ -18,7 +18,7 @@
             <h2><?php the_field('info_box_header'); ?></h2>
             <p><?php the_field('info_box_description'); ?></p>
             <div class="cta-wrapper">
-                <a href="<?php the_field('cta_link'); ?>" target="_blank"><?php the_field('info_box_cta'); ?><img src="images/arrow.png" alt=""></a>
+                <a href="<?php the_field('cta_link'); ?>" target="_blank"><?php the_field('info_box_cta'); ?><img src="wp-content/themes/wordpress_starter_theme/images/arrow.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -58,7 +58,9 @@
     <div class="images">
         <?php $firstAboutImage = get_field('about_image_1'); ?>
         <div class="about-image" style="background: url(<?php echo $firstAboutImage['url']; ?>) fixed center no-repeat;">
-            <h4><?php the_field('about_us_left_title'); ?></h4>
+            <div class="tilt">
+                <h4><?php the_field('about_us_left_title'); ?></h4>
+            </div>
         </div>
 
         <?php $secondAboutImage = get_field('about_image_2'); ?>
@@ -104,7 +106,7 @@
             <h2><?php the_field('cta_title_bottom'); ?></h2><!-- //put after element for divider content dash -->
             <p><?php the_field('cta_description_bottom'); ?></p>
             <div class="cta-wrapper">
-                <a href="<?php the_field('cta_link_bottom'); ?>" target="blank"><?php the_field('cta_text_bottom'); ?><img src="images/arrow.png" alt=""></a>
+                <a href="<?php the_field('cta_link_bottom'); ?>" target="blank"><?php the_field('cta_text_bottom'); ?><img src="wp-content/themes/wordpress_starter_theme/images/arrow.png" alt=""></a>
             </div>
 
         </div>
