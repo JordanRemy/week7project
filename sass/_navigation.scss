@@ -18,8 +18,12 @@ ul {
 		
 		li {
 			a {
-				@include navText(1.8rem);
+				@include tradeGothic(1.8rem);
 				padding: 1.65rem;
+				&:hover{
+					color: red;
+					transition: 0.4 ease all;
+				}
 			}
 		}
 	}
@@ -34,7 +38,7 @@ ul {
 	
 	ul.menu li {
 		a {
-			@include navText(1.6rem);
+			@include tradeGothic(1.6rem);
 			padding: 1.75rem 0 0;
 			display:block;
 		}
