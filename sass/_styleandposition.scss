@@ -24,14 +24,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
 a {
 	text-decoration: none;
 	outline: 0;
-=======
-h2 {
-	margin: 0;
-}
 
 img {
 	width: 100%;
->>>>>>> 9c1c9567d7f6be4684ff636efd657321eb5dd1c8
 }
 
 .wrapper {
@@ -82,14 +77,9 @@ HEROS
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
-<<<<<<< HEAD
-   
+
     h1 {
-    	@include debbyText(8.8rem);
-=======
-    h1{
     	@include debbyText(8.5rem);
->>>>>>> 9c1c9567d7f6be4684ff636efd657321eb5dd1c8
     	text-transform: lowercase;
     	opacity: 1;
     	margin: 0;
