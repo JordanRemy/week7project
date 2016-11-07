@@ -78,7 +78,7 @@ HEROS
     background-size: cover;
     color: #fff;
 
-    h1{
+    h1 {
     	@include debbyText(8.5rem);
     	text-transform: lowercase;
     	opacity: 1;
