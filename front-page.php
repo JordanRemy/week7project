@@ -34,17 +34,24 @@
         </nav>
 
         <div class="right-hand-menu">
-            <div class="menu-item">
-                <h2>Starters</h2>
-                <div class="item-info">
-                    <h3>Rice &amp; Corn Frituras</h3>
-                    <h3 class="price">19.25</h3>
-                </div>
-                <p>California brown rice, sweet corn, etc, etc, etc, ingredients, etc, stuff, etc.</p>
-
-                <h2>Main Dishes</h2>
-
-            </div>
+            <?php while (have_posts() ) : the_post(); ?>
+                <?php if(have_rows('service_group')): ?>
+                    <?php while(have_rows('service_group')): the_row(); ?>
+                        <h2 class="group-title"><?php the_sub_field('group_title')?></h2>
+                        <?php if(have_rows('service_items')): ?>
+                            <?php while(have_rows('service_items')): the_row(); ?>
+                                <div class="service-item">
+                                    <div class="item-info">
+                                        <h3><?php the_sub_field('item_title')?></h3>
+                                        <h3 class="price"><?php the_sub_field('item_price')?></h3>
+                                    </div>
+                                    <p><?php the_sub_field('item_description') ?></p>
+                                </div>    
+                            <?php endwhile; ?>
+                        <?php endif; ?> 
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
@@ -66,9 +73,7 @@
         </div>
     </div>
 
-    <div class="about-dark">
-
-    </div>
+    <div class="about-dark"></div>
 
     <div class="about-info">
         <div class="about-wrapper">
