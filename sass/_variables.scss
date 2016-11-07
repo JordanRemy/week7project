@@ -8,15 +8,28 @@
 	src: url('fonts/Debby.otf') format("opentype");
 }
 
-// @font-face {
-// 	font-family: "Proxima Nova";
-// 	src: url('fonts/proxima_nova/ProximaNova-Regular.otf') format("opentype otf");
-// }
+@font-face {
+	font-family: "Sentinel-Light";
+	src: url('fonts/Sentinel/Sentinel-Light.otf') format("opentype");
+}
+
+@font-face {
+	font-family: "Sentinel-Medium";
+	src: url('fonts/Sentinel/Sentinel-Medium.otf') format("opentype");
+}
+
+@font-face {
+	font-family: "Sentinel-Medium-Italic";
+	src: url('fonts/Sentinel/Sentinel-MediumItal.otf') format("opentype");
+}
 
 // FONTS //
 $tradegothic: "Trade Gothic";
 $debby: "Debby";
 $proxima: 'proxima nova', sans-serif;
+$sentLight: "Sentinel-Light";
+$sentMed: "Sentinel-Medium";
+$sentMedIt: "Sentinel-Medium-Italic";
 
 // COLORS //
 $main-text: #ffffff;
