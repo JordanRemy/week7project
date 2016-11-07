@@ -1,3 +1,9 @@
+/*
+====================================
+GENERAL STYLES
+====================================
+*/
+
 html {
 	font-size: 10px;
 }
@@ -9,8 +15,14 @@ body {
 	padding:0;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6, p, ul {
 	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
 }
 
 img {
@@ -65,6 +77,7 @@ HEROS
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
+
     h1{
     	@include debbyText(8.5rem);
     	text-transform: lowercase;
@@ -121,23 +134,124 @@ ABOUT US
 */
 
 .about-us {
+	height: 140vh;
+	@include flexBox();
+	position: relative;
+
 	h4 {
 		@include debbyText(18.6rem);
-		float:left;
 		text-transform: lowercase;
+	}
+
+	.images {
+		width: 42%;
+	}
+
+	.about-image {
+		height: 70vh;
+		width: 100%;
+	}
+
+	.about-dark {
+		width: 58%;
+	}
+
+	.about-info {
+		height: 100%;
+		width: 70%;
+		margin: 0 auto;
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		z-index: 5;
+
+		.about-wrapper {
+			width: 50%;
+			margin-right: 5rem;
+		}
+
+		.about-main {
+			h2 {
+				margin-bottom: 2.5rem;
+				font-family: $tradegothic;
+				font-size: 5rem;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-family: $proxima;
+				font-size: 1.65rem;
+				line-height: 2.75rem;
+			}
+		}
+
+		.about-social {
+			margin-top: 10rem;
+			text-align: center;
+
+			hr {
+				border: none;
+				height: 1px;
+				background: white;
+
+				&:first-child {
+					margin-bottom: 4rem;
+				}
+
+				&:last-of-type {
+					margin-top: 4rem;
+				}
+			}
+
+			h2, h5 {
+				font-family: $tradegothic;
+				font-size: 2.5rem;
+				text-transform: uppercase;
+			}
+
+			h5 {
+				line-height: 0;
+				margin: 2rem;
+			}
+
+			p {
+				font-size: 1.25rem;
+			}
+		}
 	}
 }
 
-.about-img {
-	height: 60vh;
-}
+/*
+====================================
+SOCIAL CONTAINER
+====================================
+*/
+.social-link-container {
+	margin-top: 2.5rem;
+	@include flexBox();
 
-.about-content {
-	width: 65%;
-	background: black;
-	height: 60vh;
-	position: relative;
-	float:right;
+	a {
+		margin-right: 1.8rem;
+		text-decoration: none;
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.social-link {
+		@include flexBox();
+		width: 4.8rem;
+		height: 4.8rem;
+		border-radius: 50%;
+		border: 1px solid white;
+
+		i {
+			font-size: 1.8rem;
+			color: white;
+		}
+	}
 }
 
 /*
@@ -145,6 +259,7 @@ ABOUT US
 SERVICE MENU
 ====================================
 */
+
 .service-menu {
 	padding: 8rem 0;
 	
@@ -163,31 +278,6 @@ SERVICE MENU
 
 /*
 ====================================
-SOCIAL CONTAINER
-====================================
-*/
-
-.social-link-container {
-	@include flexBox();
-	.social-link {
-		@include flexBox();
-		width: 4.3rem;
-		height: 4.3rem;
-		border-radius: 50%;
-		border: 1px solid white;
-		margin-right: 1.8rem;
-		&:last-of-type {
-			margin-right: 0;
-		}
-		i {
-			font-size: 1.6rem;
-			color: white;
-		}
-	}
-}
-
-/*
-====================================
 MANTRA
 ====================================
 */
@@ -195,7 +285,7 @@ MANTRA
 .mantra {
 	height: 100vh;
 	background-size: cover;
-    // background-attachment: fixed;
+    background-attachment: fixed;
 	border: 2.8rem solid white; 
 	@include flexBox();
 
@@ -220,10 +310,12 @@ MANTRA
 CALL TO ACTION
 ====================================
 */
+
 .call-to-action {
 	height: 100vh;
 	background-size: cover;
 	background-attachment: fixed;
+
 	.black-container {
 		margin: 0;
 	}
@@ -258,6 +350,7 @@ CONTACT
 			// }
 		}
 	}
+	
 	.img-wrapper {
 		width: 40rem;
 	}
@@ -268,6 +361,7 @@ CONTACT
 	align-items: flex-start;
 	margin: 9rem 0;
 	position: relative;
+	
 	&::after {
 		content: "";
 		border-bottom: 1px solid #fff;
@@ -276,12 +370,14 @@ CONTACT
 		bottom: -4.5rem;
 		opacity: 0.2;
 	}
+	
 	&:last-of-type {
 		&::after {
 			content: "";
 			display: none;
 		}
 	}
+	
 	&:nth-child(1) {
 		margin: 6rem 0;
 	}
@@ -331,7 +427,7 @@ BLOG
 	.wrapper {
 		@include flexBox();
 		flex-direction: row;
-		align-items: top;
+		align-items: flex-start;
 	}
 	
 	.main-posts-container {
@@ -341,7 +437,38 @@ BLOG
 
 	aside {
 		width: 30%;
-		background: blue;
+		background: white;
+		color: black;
+		padding: 4rem;
+
+		h2 {
+			margin-bottom: 2rem;
+			font-family: $tradegothic;
+			text-transform: uppercase;
+			font-size: 1.75rem;
+		}
+
+		a {
+			display: block;
+			padding: 0.75rem 0;
+			font-family: $proxima;
+			font-size: 1.3rem;
+			color: #898989;
+		}
+
+		a.active {
+			color: green;
+		}
+
+		hr {
+			height: 1px;
+			background-color: #898989;
+			border: none;
+
+			&:last-of-type {
+				display: none;
+			}
+		}
 	}
 
 	.main-post {
@@ -351,11 +478,11 @@ BLOG
 		color: black;
 		text-align: center;
 		
-		& :first-child {
+		&:first-child {
 			margin-top: 0;
 		}
 
-		& :last-of-type {
+		&:last-of-type {
 			margin-bottom: 0;
 		}
 
@@ -365,8 +492,34 @@ BLOG
 			letter-spacing: -0.025rem;
 		}
 
+		h4 {
+			font-family: $proxima;
+			font-size: 1.15rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #898989;
+
+			span {
+				color: #000000;
+				font-style: italic;
+			}
+		}
+
+		.img-wrapper {
+			margin: 2rem 0;
+			width: 100%;
+
+			img {
+				max-width: 100%;
+				display: block;
+			}
+		}
+
 		p {
 			text-align: left;
+			font-family: $proxima;
+			font-size: 1.2rem;
+			line-height: 2rem;
 		}
 	}
 }

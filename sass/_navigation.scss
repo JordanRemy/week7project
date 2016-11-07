@@ -10,6 +10,8 @@ ul {
 	position: fixed;
 	width: 100%;
 	z-index: 200;
+	background: linear-gradient(#232526, transparent 80%);
+	
 	ul.menu {
 		@include flexBox();
 		text-align: center;
@@ -41,6 +43,7 @@ ul {
 	border: 3px solid $main-text;
 	height: 20rem;
 	margin-right: 3rem;
+	
 	ul.menu li {
 		a {
 			@include tradeGothic(1.6rem);
