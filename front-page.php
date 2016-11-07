@@ -54,34 +54,44 @@
     <h4><?php the_field('mantra_text'); ?></h4>
 </section>
 
+<section class="about-us">
+    <div class="images">
+        <?php $firstAboutImage = get_field('about_image_1'); ?>
+        <div class="about-image" style="background: url(<?php echo $firstAboutImage['url']; ?>) fixed center no-repeat;">
+            <h4><?php the_field('about_us_left_title'); ?></h4>
+        </div>
 
-<section class="about-us clearfix">
-    <?php $firstAboutImage = get_field('about_image_1'); ?>
-    <div class="about-img" style="background: url(<?php echo $firstAboutImage['url']; ?>) fixed center no-repeat;">
-        <h4><?php the_field('about_us_left_title'); ?></h4>
-        <div class="about-content">
-            <h2><?php the_field('about_us_right_sub_title'); ?></h2>
-            <p><?php the_field('about_us_description'); ?></p>
+        <?php $secondAboutImage = get_field('about_image_2'); ?>
+        <div class="about-image" style="background: url(<?php echo $secondAboutImage['url']; ?>) fixed center no-repeat;">
         </div>
     </div>
-    
-    <?php $secondAboutImage = get_field('about_image_2'); ?>
-    <div class="about-img" style="background: url(<?php echo $secondAboutImage['url']; ?>) fixed center no-repeat;">
-        <div class="about-content">
-            <div class="inner-wrapper">
+
+    <div class="about-dark">
+
+    </div>
+
+    <div class="about-info">
+        <div class="about-wrapper">
+            <div class="about-main">
+                <h2><?php the_field('about_us_right_sub_title'); ?></h2>
+                <p><?php the_field('about_us_description'); ?></p>
+            </div>
+
+            <div class="about-social">
                 <hr>
-                <h2><?php the_field('social_links_header'); ?></h2><!-- //put after element for divider content dash -->
+                <h2><?php the_field('social_links_header'); ?></h2>
+                <h5>-</h5>
                 <p><?php the_field('social_links_description') ?></p>
-                <hr>
                 <div class="social-link-container">
                     <?php while(have_rows('social')) : the_row();?>
-                        <div class="social-link">
-                            <a href="<?php the_sub_field('social_link'); ?>" target="_blank">
+                        <a href="<?php the_sub_field('social_link'); ?>" target="_blank">
+                            <div class="social-link">
                                 <i class="fa fa-<?php the_sub_field('social_platform_name'); ?>"></i>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     <?php endwhile; ?>  
                 </div>
+                <hr>
             </div>
         </div>
     </div>
