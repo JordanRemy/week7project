@@ -281,6 +281,9 @@ SERVICE MENU
 
 .service-menu {
 	padding: 8rem 0;
+	background-image: url(images/patterns.png);
+	background-size: contain;
+	background-repeat: repeat;
 	
 	.wrapper {
 		@include flexBox();
