@@ -44,6 +44,9 @@
 				font-size: 0.9rem;
 				letter-spacing: 0.1rem;
 				border-top: solid 1px #dddddd;
+				&:hover {
+					color: #c9ff0f;
+				}
 				&:last-of-type {
 					padding-right: 0;
 				}

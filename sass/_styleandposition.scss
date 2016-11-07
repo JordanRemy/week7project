@@ -3,6 +3,9 @@
 GENERAL STYLES
 ====================================
 */
+*:focus {
+	outline: none;
+}
 
 html {
 	font-size: 10px;
@@ -81,7 +84,7 @@ HEROS
     h1 {
     	@include debbyText(8.5rem);
     	text-transform: lowercase;
-    	opacity: 1;
+    	opacity: .70;
     	margin: 0;
     }
 }
@@ -90,6 +93,7 @@ HEROS
 .secondary {
 	h1 {
 		font-size: 18.6rem;
+		letter-spacing: 0.01em;
 	}
 }
 
@@ -98,6 +102,8 @@ HEROS
 	flex-direction: column;
 	padding-top: $nav-height;
 	height: 90%;
+	z-index: 0;
+	position: relative;
 }
 
 .logo-wrapper {
@@ -113,7 +119,6 @@ img {
 	padding: 5.5rem 7rem;
 	margin-top: 20rem;
 	position: relative;
-	z-index: 100;
 	&::after {
 		content: "";
 		position: absolute;
@@ -132,6 +137,10 @@ img {
 ABOUT US
 ====================================
 */
+.tilt {
+	transform: rotate(-16deg);
+	padding: 12rem 4rem 0;
+}
 
 .about-us {
 	height: 140vh;
@@ -141,6 +150,8 @@ ABOUT US
 	h4 {
 		@include debbyText(18.6rem);
 		text-transform: lowercase;
+		text-align: left;
+		line-height: 8.4rem;
 	}
 
 	.images {
@@ -180,9 +191,9 @@ ABOUT US
 			}
 
 			p {
-				font-family: $proxima;
-				font-size: 1.65rem;
-				line-height: 2.75rem;
+				@include sentText(1.5rem)
+				line-height: 2.3rem;
+				letter-spacing: 0.05rem;
 			}
 		}
 
@@ -216,7 +227,9 @@ ABOUT US
 			}
 
 			p {
-				font-size: 1.25rem;
+				@include sentText(1.35rem)
+				line-height: 2.3rem;
+				letter-spacing: 0.05rem;
 			}
 		}
 	}
@@ -246,6 +259,12 @@ SOCIAL CONTAINER
 		height: 4.8rem;
 		border-radius: 50%;
 		border: 1px solid white;
+		&:hover {
+			border-color: $hovercolor;
+		}
+		&:hover i{
+			color: $hovercolor;
+		}
 
 		i {
 			font-size: 1.8rem;
@@ -342,6 +361,8 @@ CALL TO ACTION
 	}
 	.wrapper-2 {
 		height: 100%;
+		position: relative;
+		z-index: 0;
 	}
 }
 
@@ -439,6 +460,7 @@ BLOG
 
 .secondary.hero {
 	height: 65vh;
+	background-repeat: no-repeat;
 }
 
 .blog-body {
@@ -470,15 +492,15 @@ BLOG
 		}
 
 		a {
+			@include proxima(1.1em)
 			display: block;
-			padding: 0.75rem 0;
-			@include proxima(1.3rem);
-			letter-spacing: 0.1rem;
+			padding: 0.95rem 0;
 			color: #898989;
+			letter-spacing: 0.08em;
 		}
 
 		a.active {
-			color: green;
+			color: #455705;
 		}
 
 		hr {
@@ -514,11 +536,10 @@ BLOG
 		}
 
 		h4 {
-			font-family: $sentMed;
-			font-size: 1.15rem;
+			@include proxima(1.15rem);
 			font-weight: 700;
-			text-transform: uppercase;
 			color: #898989;
+			letter-spacing: 0.10rem;
 
 			span {
 				color: #000000;
@@ -537,11 +558,11 @@ BLOG
 		}
 
 		p {
-			@include sentText(1.35rem);
+			@include sentText(1.5rem);
 			text-align: left;
+			line-height: 2.3rem;
+			letter-spacing: .05rem;
 			color: black;
-			line-height: 2rem;
-			letter-spacing: 0.1rem;
 		}
 	}
 }
@@ -560,5 +581,15 @@ CTAS
 		@include proxima(1.2rem);
 		font-weight: 700;
 		text-decoration: none;
+		&:hover {
+			color: $hovercolor;
+		}
+		&:hover img {
+			color: red;
+		}
+		img {
+			width: 1.2rem;
+			margin-left: 0.6rem;
+		}
 	}
 }
